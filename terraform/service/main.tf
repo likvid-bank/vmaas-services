@@ -50,8 +50,9 @@ module "instance" {
   subnet_id = azurerm_subnet.project[each.value.context.project_id].id
 
   # from parameters
-  name = local.instances[each.value.serviceInstanceId].parameters.name
-  size = local.instances[each.value.serviceInstanceId].parameters.storage
+  name    = local.instances[each.value.serviceInstanceId].parameters.name
+  size    = local.instances[each.value.serviceInstanceId].parameters.size
+  storage = lookup(local.instances[each.value.serviceInstanceId].parameters, "storage", 0)
 
   admin = {
     username       = local.instances[each.value.serviceInstanceId].parameters.username
