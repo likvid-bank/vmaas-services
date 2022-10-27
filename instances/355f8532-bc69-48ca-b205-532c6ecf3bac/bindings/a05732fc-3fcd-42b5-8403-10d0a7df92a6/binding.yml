@@ -1,0 +1,21 @@
+---
+bindingId: "a05732fc-3fcd-42b5-8403-10d0a7df92a6"
+serviceInstanceId: "355f8532-bc69-48ca-b205-532c6ecf3bac"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "49ea831e-a209-4e4f-a21b-8bc6c8c468e4"
+  user_euid: "likvid-anna@meshcloud.io"
+parameters: {}
+bindResource:
+  tenant_id: "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/likvid-backend.backend-develop"
+  platform: "azure-ls.lift-and-shift"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "backend-develop"
+  auth_url: null
+  customer_id: "likvid-backend"
+  token_url: null
+deleted: false
