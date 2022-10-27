@@ -1,0 +1,21 @@
+---
+bindingId: "73828a7e-c142-43a6-9c5f-66b5e8a93ab4"
+serviceInstanceId: "2731a6ad-bc37-4aa3-9f9d-1d6ac0b38ba7"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "49ea831e-a209-4e4f-a21b-8bc6c8c468e4"
+  user_euid: "likvid-anna@meshcloud.io"
+parameters: {}
+bindResource:
+  tenant_id: "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/likvid-operations.legacy-support"
+  platform: "azure-ls.lift-and-shift"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "legacy-support"
+  auth_url: null
+  customer_id: "likvid-operations"
+  token_url: null
+deleted: false
