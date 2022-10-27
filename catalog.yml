@@ -54,9 +54,10 @@ services:
 
                   username:
                     title: Username
-                    description: "Not allowed: admin, user, support"
+                    description: "Must follow pattern likvid-<name>"
                     type: string
-                    pattern: '^(?!admin)(?!user)(?!support)\w{3,16}'
+                    pattern: '^likvid-\w{3,16}'
+                    default: likvid-
 
                   ssh_public_key:
                     title: SSH Public Key
@@ -108,9 +109,10 @@ services:
 
                   username:
                     title: Username
-                    description: "Not allowed: admin, user, support"
+                    description: "Must follow pattern likvid-<name>"
                     type: string
-                    pattern: '^(?!admin)(?!user)(?!support)\w{3,16}'
+                    pattern: '^likvid-\w{3,16}'
+                    default: likvid-
 
                   ssh_public_key:
                     title: SSH Public Key
