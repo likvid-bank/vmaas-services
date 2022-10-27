@@ -9,6 +9,7 @@ on:
       - terraform/instance/*.tf
       - instances/*/instance.yml
       - instances/*/bindings/*/binding.yml
+      - .github/workflows/vmaas.yml
 
 jobs:
   terraform-apply:
