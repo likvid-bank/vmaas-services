@@ -51,7 +51,7 @@ module "instance" {
 
   # from parameters
   name = local.instances[each.value.serviceInstanceId].parameters.name
-  size = local.instances[each.value.serviceInstanceId].parameters.size
+  size = local.instances[each.value.serviceInstanceId].parameters.storage
 
   admin = {
     username       = local.instances[each.value.serviceInstanceId].parameters.username
