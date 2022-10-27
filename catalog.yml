@@ -54,9 +54,9 @@ services:
 
                   username:
                     title: Username
-                    description: "Not allowed: admin, user"
+                    description: "Not allowed: admin, user, support"
                     type: string
-                    pattern: '^(?!admin)(?!user)\w{3,16}'
+                    pattern: '^(?!admin)(?!user)(?!support)\w{3,16}'
 
                   ssh_public_key:
                     title: SSH Public Key
@@ -108,9 +108,9 @@ services:
 
                   username:
                     title: Username
-                    description: "Not allowed: admin, user"
+                    description: "Not allowed: admin, user, support"
                     type: string
-                    pattern: '^(?!admin)(?!user)\w{3,16}'
+                    pattern: '^(?!admin)(?!user)(?!support)\w{3,16}'
 
                   ssh_public_key:
                     title: SSH Public Key
