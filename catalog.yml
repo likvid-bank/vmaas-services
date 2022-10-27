@@ -61,8 +61,9 @@ services:
 
                   ssh_public_key:
                     title: SSH Public Key
-                    description: For SSH user
+                    description: In OpenSSH format
                     type: string
+                    pattern: '^ssh-\w .+'
 
       - id: be67fa24-7eb2-49ee-9df5-5368eae4cf7f
         name: "Storage"
@@ -116,8 +117,9 @@ services:
 
                   ssh_public_key:
                     title: SSH Public Key
-                    description: For SSH user
+                    description: In OpenSSH format
                     type: string
+                    pattern: '^ssh-\w .+'
 
                   storage:
                     title: Storage
