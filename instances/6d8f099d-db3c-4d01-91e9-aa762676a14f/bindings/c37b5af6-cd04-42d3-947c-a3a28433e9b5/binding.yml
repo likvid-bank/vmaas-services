@@ -1,0 +1,21 @@
+---
+bindingId: "c37b5af6-cd04-42d3-947c-a3a28433e9b5"
+serviceInstanceId: "6d8f099d-db3c-4d01-91e9-aa762676a14f"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "b8d753c5-1647-42be-a1e2-33b950ce6069"
+  user_euid: "jrudolph@meshcloud.io"
+parameters: {}
+bindResource:
+  tenant_id: "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/intranet-portal.dev"
+  platform: "azure-ls.lift-and-shift"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "dev"
+  auth_url: null
+  customer_id: "intranet-portal"
+  token_url: null
+deleted: false
