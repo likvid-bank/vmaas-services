@@ -1,0 +1,143 @@
+---
+serviceInstanceId: "e5069746-4e07-43dc-ab49-242ffe548a45"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+serviceDefinition:
+  id: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+  name: "Virtual Machine"
+  description: "Pre-configured virtual machines for lift and shift projects."
+  plans:
+  - id: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+    name: "Basic"
+    description: "Virtual machine without additional storage."
+    metadata: {}
+    schemas:
+      service_instance:
+        create:
+          parameters:
+            $schema: "http://json-schema.org/draft-04/schema#"
+            required:
+            - "name"
+            - "size"
+            - "source_image_id"
+            - "username"
+            - "ssh_public_key"
+            properties:
+              name:
+                title: "Hostname"
+                description: "Must be a valid hostname"
+                type: "string"
+                format: "hostname"
+              size:
+                title: "Size"
+                type: "string"
+                description: "Determines vCPUs, memory, etc."
+                enum:
+                - "Standard_A1_v2"
+                - "Standard_A2_v2"
+                widget: "select"
+                default: "Standard_A2_v2"
+              source_image_id:
+                title: "Image"
+                type: "string"
+                enum:
+                - "Canonical:UbuntuServer:18.04-LTS:latest"
+                widget: "select"
+                default: "Canonical:UbuntuServer:18.04-LTS:latest"
+              username:
+                title: "Username"
+                description: "Must follow pattern likvid-<name>"
+                type: "string"
+                pattern: "^likvid-\\w{3,16}"
+                default: "likvid-"
+              ssh_public_key:
+                title: "SSH Public Key"
+                description: "In OpenSSH format"
+                type: "string"
+                pattern: "^ssh-\\w+ .+"
+    free: true
+  - id: "be67fa24-7eb2-49ee-9df5-5368eae4cf7f"
+    name: "Storage"
+    description: "Virtual machine with additional storage."
+    metadata: {}
+    schemas:
+      service_instance:
+        create:
+          parameters:
+            $schema: "http://json-schema.org/draft-04/schema#"
+            required:
+            - "name"
+            - "size"
+            - "storage"
+            - "source_image_id"
+            - "username"
+            - "ssh_public_key"
+            properties:
+              name:
+                title: "Hostname"
+                description: "Must be a valid hostname"
+                type: "string"
+                format: "hostname"
+              size:
+                title: "Size"
+                type: "string"
+                description: "Determines vCPUs, memory, etc."
+                enum:
+                - "Standard_A1_v2"
+                - "Standard_A2_v2"
+                widget: "select"
+                default: "Standard_A2_v2"
+              source_image_id:
+                title: "Image"
+                type: "string"
+                enum:
+                - "Canonical:UbuntuServer:18.04-LTS:latest"
+                widget: "select"
+                default: "Canonical:UbuntuServer:18.04-LTS:latest"
+              username:
+                title: "Username"
+                description: "Must follow pattern likvid-<name>"
+                type: "string"
+                pattern: "^likvid-\\w{3,16}"
+                default: "likvid-"
+              ssh_public_key:
+                title: "SSH Public Key"
+                description: "In OpenSSH format"
+                type: "string"
+                pattern: "^ssh-\\w+ .+"
+              storage:
+                title: "Storage"
+                type: "integer"
+                minimum: 1
+                maximum: 1000
+                description: "Size (in GB) of the storage drive"
+                default: 100
+    free: true
+  bindable: true
+  planUpdateable: false
+  tags: []
+  metadata:
+    imageUrl: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
+    documentationUrl: "https://learn.microsoft.com/en-us/azure/virtual-machines/av2-series"
+    tenantAware: true
+  requires: []
+  dashboardClient: null
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "428aae88-7ab8-4c67-a56e-72bbc9034e3d"
+  user_euid: "jdburger@meshcloud.io"
+asyncAccepted: true
+parameters:
+  name: "hello.com"
+  size: "Standard_A2_v2"
+  source_image_id: "Canonical:UbuntuServer:18.04-LTS:latest"
+  username: "likvid-user"
+  ssh_public_key: "ssh-rsa sample"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "anotherdemovideo"
+  auth_url: null
+  customer_id: "jelles-workspace"
+  token_url: null
+deleted: false
