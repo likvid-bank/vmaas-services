@@ -11,6 +11,11 @@ provider "kubernetes" {
 }
 
 
+variable "arm_client_secret" {
+  type      = string
+  sensitive = true
+}
+
 resource "kubernetes_namespace" "unipipe_vmaas" {
   metadata {
     name = "unipipe-vmaas-likvid"
@@ -45,6 +50,25 @@ resource "kubernetes_secret" "unipipe_vmaas" {
     "GIT_SSH_KEY"             = tls_private_key.git_ssh_key.private_key_pem
     "APP_BASIC_AUTH_USERNAME" = "marketplace"
     "APP_BASIC_AUTH_PASSWORD" = random_password.basic_auth_password.result
+  }
+}
+
+resource "kubernetes_secret" "unipipe_vmaas_tf" {
+  metadata {
+    name      = "unipipe-vmaas-tf-config"
+    namespace = kubernetes_namespace.unipipe_vmaas.metadata[0].name
+  }
+
+  data = {
+    "ARM_CLIENT_SECRET"      = var.arm_client_secret
+    "GIT_USER_EMAIL"         = "unipipe-terraform@meshcloud.io"
+    "GIT_USER_NAME"          = "UniPipe"
+    "ARM_SUBSCRIPTION_ID"    = "e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848"
+    "ARM_CLIENT_ID"          = "ac50274b-bb0a-4e74-9f42-6c4d8de388c6"
+    "ARM_TENANT_ID"          = "703c8d27-13e0-4836-8b2e-8390c588cf80"
+    "KUBE_IN_CLUSTER_CONFIG" = "true"
+    "TF_VAR_platform_secret" = "unused"
+    "TF_IN_AUTOMATION"       = "true"
   }
 }
 
@@ -87,6 +111,8 @@ resource "kubernetes_deployment" "unipipe_vmaas" {
       }
 
       spec {
+        service_account_name = kubernetes_service_account.unipipe_vmaas.metadata[0].name
+
         container {
           name  = "unipipe-service-broker"
           image = "ghcr.io/meshcloud/unipipe-service-broker:latest"
@@ -102,16 +128,31 @@ resource "kubernetes_deployment" "unipipe_vmaas" {
             }
           }
         }
+
+        container {
+          name  = "unipipe-terraform-runner"
+          image = "ghcr.io/meshcloud/unipipe-terraform-runner:latest"
+
+          env_from {
+            secret_ref {
+              name = "unipipe-vmaas-config"
+            }
+          }
+
+          env_from {
+            secret_ref {
+              name = "unipipe-vmaas-tf-config"
+            }
+          }
+        }
       }
     }
   }
-}
 
-output "url" {
-  value = "http://unipipe-vmaas.${kubernetes_namespace.unipipe_vmaas.metadata[0].name}.svc.cluster.local"
-}
-
-output "password" {
-  value = random_password.basic_auth_password.result
-  sensitive = true
+  lifecycle {
+    replace_triggered_by = [
+      kubernetes_secret.unipipe_vmaas,
+      kubernetes_secret.unipipe_vmaas_tf
+    ]
+  }
 }
