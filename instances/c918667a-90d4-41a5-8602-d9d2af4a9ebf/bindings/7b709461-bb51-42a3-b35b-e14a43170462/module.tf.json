@@ -1,0 +1,26 @@
+{
+  "variable": {
+    "platform_secret": {
+      "description": "The secret that will be used by Terraform to authenticate against the cloud platform.",
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "module": {
+    "wrapper": {
+      "source": "../../../../terraform/65620451-d0f8-4e11-baee-5dcd5269cba5",
+      "platform_secret": "${var.platform_secret}",
+      "plan_id": "e63651e4-f1ad-417f-a744-1bb5916eb30d",
+      "plan_name": "Basic",
+      "platform": "azure-ls.lift-and-shift",
+      "project_id": "prevideotest",
+      "customer_id": "jelles-workspace",
+      "name": "frontend-dev",
+      "size": "Standard_A1_v2",
+      "source_image_id": "Canonical:UbuntuServer:18.04-LTS:latest",
+      "username": "likvid-user",
+      "ssh_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC0l6mzLBUZln6d7NmksVzL0rI3S5MOqAkJr05dCdTQMUxwSDHKd+rZmCXFhHvXNpAelCodeAOxWtI7eGlh//FuxZ7VSBJUtWxx9+Mp8H6fbkxR0oqYQ5JkAU3EleXM6ywbGxaez+tqNl3V/8QdXuUofeq8glVmd94e7Td6BnzB5/8ak5G4FWHbmQxruQrNbpsnUfS56dN65YNCSjidVxQzMHg5MAmS2HtXuE7oHB0k2wgBxMp53KZstLCS19NdokeE+opmr9l0UKXYfgqDc5JZm+7ErnB+ZxCSdC6z0JMJrwAXTOJ5xexo8kkD7WXWcPLSe8QZtPdCdLwhe1EcOcrh4AUIWVcf8XqNAlAVkNS8QOh5c0g2KOmNbz4ulR1DNWSCgdtn74RYbMd08kvAfia80TqDZCA2vShiGuN++4mn5yNRKIFeJ1QTcM6jqvBb12vhMzcbsnfWWfMju0+u5C4Vm74RdlOw6phLKOeSHR9CFtxFCKIOD1RaympZzy/9DOxo272vLtZrtX3l2sBwVvXMjD9TVvFGVFFN6w31caHUV0IWmy0ZblgGhF1f7UZuaYCIwjeIoYM/cEr7p51hvEGmKqeAsxCkFYY3LKz0UaN62qnIVIhdA5qJz5YkgLwpmHlHnfWbB/IXAv19H3nxWrRQWFTedv5u2xGnDVdNhAIwwQ==",
+      "tenant_id": "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/jelles-workspace.prevideotest"
+    }
+  }
+}
