@@ -63,7 +63,7 @@ services:
                     title: SSH Public Key
                     description: In OpenSSH format
                     type: string
-                    pattern: '^ssh-\w+ .+'
+                    pattern: '^ssh-rsa AAAA[0-9A-Za-z+\/]+={0,3}( [^@]+@[^@]+)?$'
 
       - id: be67fa24-7eb2-49ee-9df5-5368eae4cf7f
         name: "Storage"
@@ -119,7 +119,7 @@ services:
                     title: SSH Public Key
                     description: In OpenSSH format
                     type: string
-                    pattern: '^ssh-\w+ .+'
+                    pattern: '^ssh-rsa AAAA[0-9A-Za-z+\/]+={0,3}( [^@]+@[^@]+)?$'
 
                   storage:
                     title: Storage
