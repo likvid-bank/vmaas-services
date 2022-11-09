@@ -1,3 +1,2 @@
----
-status: "in progress"
-description: "preparing service deletion"
+status: succeeded
+description: Service Instance successfully deleted!
