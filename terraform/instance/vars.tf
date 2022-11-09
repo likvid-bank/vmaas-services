@@ -27,10 +27,6 @@ variable "location" {
   default = "West Europe"
 }
 
-variable "subnet_id" {
-  type    = string
-}
-
 variable "storage" {
   type    = number
   default = 0

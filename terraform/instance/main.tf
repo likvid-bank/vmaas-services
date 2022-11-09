@@ -1,3 +1,9 @@
+data "azurerm_subnet" "main" {
+  name                 = "default"
+  virtual_network_name = "vmaas"
+  resource_group_name  = "vmaas"
+}
+
 resource "azurerm_network_interface" "main" {
   name                = "${var.name}-nic"
   location            = var.location
@@ -6,7 +12,7 @@ resource "azurerm_network_interface" "main" {
   ip_configuration {
     name      = "internal"
     primary   = true
-    subnet_id = var.subnet_id
+    subnet_id = data.azurerm_subnet.main.id
 
     private_ip_address_allocation = "Dynamic"
   }
