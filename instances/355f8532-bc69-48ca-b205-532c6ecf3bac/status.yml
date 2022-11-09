@@ -1,2 +1,2 @@
-"description": ""
-"status": "succeeded"
+status: failed
+description: Applying Terraform failed!
