@@ -141,4 +141,4 @@ context: !<PlatformContext>
   auth_url: null
   customer_id: "intranet-portal"
   token_url: null
-deleted: false
+deleted: true
