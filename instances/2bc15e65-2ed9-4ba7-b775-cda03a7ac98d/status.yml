@@ -1,2 +1,2 @@
-status: failed
-description: Applying Terraform failed!
+status: succeeded
+description: Terraform applied successfully
