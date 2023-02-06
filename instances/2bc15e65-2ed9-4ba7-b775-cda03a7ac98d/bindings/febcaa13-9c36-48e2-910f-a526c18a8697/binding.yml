@@ -1,0 +1,21 @@
+---
+bindingId: "febcaa13-9c36-48e2-910f-a526c18a8697"
+serviceInstanceId: "2bc15e65-2ed9-4ba7-b775-cda03a7ac98d"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "95d6a502-7260-4bd4-8917-336133477b4e"
+  user_euid: "ckraus@meshcloud.io"
+parameters: {}
+bindResource:
+  tenant_id: "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/likvid-mobile.azure-lift-shift"
+  platform: "azure-ls.lift-and-shift"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "azure-lift-shift"
+  auth_url: null
+  customer_id: "likvid-mobile"
+  token_url: null
+deleted: false
