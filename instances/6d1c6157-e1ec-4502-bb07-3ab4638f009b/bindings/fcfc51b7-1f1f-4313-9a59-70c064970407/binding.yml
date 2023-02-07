@@ -1,0 +1,21 @@
+---
+bindingId: "fcfc51b7-1f1f-4313-9a59-70c064970407"
+serviceInstanceId: "6d1c6157-e1ec-4502-bb07-3ab4638f009b"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "95d6a502-7260-4bd4-8917-336133477b4e"
+  user_euid: "ckraus@meshcloud.io"
+parameters: {}
+bindResource:
+  tenant_id: "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/likvid-mobile.new-cloud-project"
+  platform: "azure-ls.lift-and-shift"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "new-cloud-project"
+  auth_url: null
+  customer_id: "likvid-mobile"
+  token_url: null
+deleted: false
