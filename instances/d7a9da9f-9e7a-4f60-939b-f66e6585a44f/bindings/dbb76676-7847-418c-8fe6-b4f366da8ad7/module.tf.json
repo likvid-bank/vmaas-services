@@ -1,0 +1,26 @@
+{
+  "variable": {
+    "platform_secret": {
+      "description": "The secret that will be used by Terraform to authenticate against the cloud platform.",
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "module": {
+    "wrapper": {
+      "source": "../../../../terraform/65620451-d0f8-4e11-baee-5dcd5269cba5",
+      "platform_secret": "${var.platform_secret}",
+      "plan_id": "e63651e4-f1ad-417f-a744-1bb5916eb30d",
+      "plan_name": "Basic",
+      "platform": "azure-ls.lift-and-shift",
+      "project_id": "new-vmproject",
+      "customer_id": "likvid-mobile",
+      "name": "vm-friday",
+      "size": "Standard_A2_v2",
+      "source_image_id": "Canonical:UbuntuServer:18.04-LTS:latest",
+      "username": "likvid-ckraus",
+      "ssh_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDSAeD6EqTHGTzkyc+jV8JolKN5dXA16m1wxHc+dgHCKXuteBkLHPy7/arf1F6VlI7CS4tirUag0/o6+mVpUCwDzmTxZZs1QgoUAFl0xNjyNzK0ldx4B1Eiy3L9UHQSlIQvYjlHMhjMK5cdpvRGGXaUamswYC9YG9WUnTpqWhz2yajFL0Ij9Ai+acF8hoxLt2dWToUFNQ1w2SAdb5jM+Mf4nM+CfxSgMjr6s8hsUY3RmjbOxMIFYxqAiqlfVFB0lg7va2LIDT5VwHtmepSXYwOkAUVlHjGmKJHyo3+WymOn019KeU/omQtbUH3aOhNrOzZL6L12Ju9Ywxlmsbqv5q9HBaB2fbMhJmC/IVcBJAcNSIOr6lE2fVV82VJd9f/B/995ZVIfnCn/xbodpCWVxcxNLSCy0kEYxvk+wb44nAb0dBLEkwPkP+lmcPjhOCTYCL71Op0XXOKTUDPfY69FrqBvGwzT3MgIftZYBKAkBzNexRkLpZHwyVHzh8QaaPyWpZ6zcpwSt9FgpGSrbuvEylfKbb9lG9io082oJV4MEVeExLiAiRbwIz0TeY83eOaxsAeEhBZJ9PhhVpAxnQGqUKJLghHkNiRauvJ7PYbZqYcVbL7LpUgWICGKubycQbExnY3Ha2FaGlrM1lzjHUfcMfVEj61q7lxZfiSlSJPpLL96PQ==",
+      "tenant_id": "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/likvid-mobile.new-vmproject"
+    }
+  }
+}
