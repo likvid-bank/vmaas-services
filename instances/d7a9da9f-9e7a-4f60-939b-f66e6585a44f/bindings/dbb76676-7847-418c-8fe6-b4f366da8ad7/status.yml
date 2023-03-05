@@ -1,2 +1,2 @@
-status: succeeded
-description: Terraform applied successfully
+status: failed
+description: Processing the binding failed!
