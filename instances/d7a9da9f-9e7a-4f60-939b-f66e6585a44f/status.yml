@@ -1,3 +1,2 @@
----
-status: "in progress"
-description: "preparing service deletion"
+status: failed
+description: Applying Terraform failed!
