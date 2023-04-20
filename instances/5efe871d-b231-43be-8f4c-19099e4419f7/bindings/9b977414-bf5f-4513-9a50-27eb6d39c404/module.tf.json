@@ -1,0 +1,26 @@
+{
+  "variable": {
+    "platform_secret": {
+      "description": "The secret that will be used by Terraform to authenticate against the cloud platform.",
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "module": {
+    "wrapper": {
+      "source": "../../../../terraform/65620451-d0f8-4e11-baee-5dcd5269cba5",
+      "platform_secret": "${var.platform_secret}",
+      "plan_id": "e63651e4-f1ad-417f-a744-1bb5916eb30d",
+      "plan_name": "Basic",
+      "platform": "azure-ls.lift-and-shift",
+      "project_id": "demo-proj-dev",
+      "customer_id": "website-qa",
+      "name": "Eraldo",
+      "size": "Standard_A2_v2",
+      "source_image_id": "Canonical:UbuntuServer:18.04-LTS:latest",
+      "username": "likvid-default",
+      "ssh_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXE9eQ2rixNbrQ/AdMfp/FnbF1alTxcZXE6X2BK65uMWnx16X1dmQIvFrm+FYKh0sbOXS8HJDPqMVIea+NCfyT9VsLMkCW6ls+2+JGLDHhOljqcyy9OpRsna9kqQ+qBBM+SJvNOqtBiZsq4K6wIcyN+VOlSICG9n/nLLaVc0VHycV7FN7ToWmy4Rbgz2kjJjubpHeeEFcrB1oJxMrWrQ2xxC8kjSDU0mtaGHg4s28EV4osKp2Q9c3VYyNX2IDkllQUuQ3eiIvN/IRvmq9CvozDEUL8cOqr+Zn28lw4UyC8owpDXzx+YFOIAJZXchzPFTZSeAEstOfvQiO7I2vaQcfL",
+      "tenant_id": "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/website-qa.demo-proj-dev"
+    }
+  }
+}
