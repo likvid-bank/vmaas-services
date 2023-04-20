@@ -1,0 +1,21 @@
+---
+bindingId: "9b977414-bf5f-4513-9a50-27eb6d39c404"
+serviceInstanceId: "5efe871d-b231-43be-8f4c-19099e4419f7"
+serviceDefinitionId: "65620451-d0f8-4e11-baee-5dcd5269cba5"
+planId: "e63651e4-f1ad-417f-a744-1bb5916eb30d"
+originatingIdentity: !<PlatformContext>
+  platform: "meshmarketplace"
+  user_id: "2a8764a5-2ab8-42de-9ea9-7015dc71bf59"
+  user_euid: "egrabovaj@meshcloud.io"
+parameters: {}
+bindResource:
+  tenant_id: "/subscriptions/e1c85eff-0a2c-4268-9b6c-7d2ff9ca9848/resourceGroups/website-qa.demo-proj-dev"
+  platform: "azure-ls.lift-and-shift"
+context: !<PlatformContext>
+  platform: "meshmarketplace"
+  permission_url: null
+  project_id: "demo-proj-dev"
+  auth_url: null
+  customer_id: "website-qa"
+  token_url: null
+deleted: false
