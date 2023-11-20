@@ -7,7 +7,7 @@ terraform {
 
 provider "kubernetes" {
   config_path    = "~/.kube/config"
-  config_context = "gke_meshcloud-meshcloud--bc0_europe-west1-b_meshstacks"
+  config_context = "gke_meshcloud-meshcloud--bc0_europe-west1_meshstacks-ha"
 }
 
 
